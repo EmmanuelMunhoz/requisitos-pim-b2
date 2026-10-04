@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portal de acompanhamento do PIM II 2026/2 da UNIP: requisitos, disciplinas, sistema em C, checklist, entregáveis e riscos." />
+  <meta name="theme-color" content="#0b4778" />
+  <title>PIM II 2026/2 • ADS UNIP</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <div class="app-shell">
+    <header class="site-header" id="sidebar">
+      <div class="header-inner">
+        <a class="brand-wrap" href="#inicio" aria-label="PIM II - início">
+          <span class="brand-logo-box"><img src="assets/unip-logo-dourado.png" alt="UNIP - Universidade Paulista" class="brand-logo" width="2172" height="724" /></span>
+        </a>
+
+        <nav class="side-nav" aria-label="Navegação principal">
+          <a href="#inicio" class="nav-link active">Visão geral</a>
+          <a href="#checklist" class="nav-link">Checklist</a>
+          <a href="#disciplinas" class="nav-link">Disciplinas</a>
+          <a href="#sistema-c" class="nav-link">Sistema em C</a>
+          <a href="#entregaveis" class="nav-link">Entregáveis</a>
+          <a href="#riscos" class="nav-link">Riscos</a>
+        </nav>
+
+        <div class="header-actions">
+          <div class="header-progress" aria-label="Progresso do checklist"><span id="sideProgressText">0%</span><div class="progress-track"><div class="progress-fill" id="sideProgressBar"></div></div></div>
+          <a class="primary-button compact" href="docs/PIM-II-oficial-2026-2.pdf" target="_blank" rel="noopener">PDF oficial</a>
+          <button class="icon-button mobile-menu" id="menuButton" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </header>
+
+    <main id="conteudo" class="main-content">
+      <section id="inicio" class="hero section-anchor">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="dot"></span> Documento de referência • PIM II • 2026/2</div>
+            <h1><span>PIM II</span> 2026/2, sem esquecer nenhum requisito.</h1>
+            <p class="hero-lead"><strong>Desenvolvimento de um Sistema Catálogo e Gerenciador de Configurações de Agentes de IA (AI Agent Registry).</strong></p>
+            <p class="hero-description">Um guia visual para acompanhar requisitos por disciplina, desenvolvimento do sistema, entregáveis e riscos críticos.</p>
+            <div class="hero-actions">
+              <a href="#checklist" class="primary-button">Começar pelo checklist</a>
+              <a href="#disciplinas" class="secondary-button">Ver por disciplina</a>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="hero-panel__header">
+              <span class="status-pill mandatory">Obrigatório</span>
+              <span class="source-ref">Base: guia PIM II 2026/2</span>
+            </div>
+            <div class="score-card">
+              <span>Objetivo</span>
+              <strong>Projetar e implementar um catálogo de configurações de agentes de IA.</strong>
+              <small>Com engenharia ágil, C, banco de dados, redes, IA, inovação e sustentabilidade.</small>
+            </div>
+            <div class="hero-note">
+              <span aria-hidden="true">◎</span>
+              <p>O documento oficial define os requisitos por disciplina. A contribuição de cada uma deve aparecer nos artefatos entregues.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="stats-grid" aria-label="Resumo rápido">
+          <article class="stat-card"><span class="stat-value">7</span><div><strong>frentes disciplinares</strong><small>integradas no mesmo projeto</small></div></article>
+          <article class="stat-card"><span class="stat-value">50</span><div><strong>agentes</strong><small>limite máximo do programa em C</small></div></article>
+          <article class="stat-card"><span class="stat-value">8</span><div><strong>integrantes por grupo</strong><small>orientação atual da coordenação</small></div></article>
+          <article class="stat-card"><span class="stat-value">1</span><div><strong>documento oficial</strong><small>base acadêmica do portal</small></div></article>
+        </div>
+      </section>
+
+      <section class="content-section search-section" aria-label="Busca rápida">
+        <div class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="globalSearch" type="search" placeholder="Buscar requisito: DER, DHCP, UML, arquivos, nota, ABNT..." autocomplete="off" />
+          <kbd>/</kbd>
+        </div>
+        <p id="searchStatus" class="search-status" aria-live="polite"></p>
+      </section>
+
+      <section id="checklist" class="content-section section-anchor searchable-block" data-search="checklist mestre requisitos obrigatorios entregas">
+        <div class="section-heading">
+          <div>
+            <span class="section-label">02 • Controle do projeto</span>
+            <h2>Checklist mestre</h2>
+            <p>Marque o que o grupo já concluiu. O progresso fica salvo neste navegador.</p>
+          </div>
+          <div class="progress-card">
+            <div class="progress-card__top"><strong id="progressText">0 de 0 concluídos</strong><span id="progressPercent">0%</span></div>
+            <div class="progress-track large"><div class="progress-fill" id="progressBar"></div></div>
+          </div>
+        </div>
+
+        <div class="filter-row" role="group" aria-label="Filtrar checklist">
+          <button class="filter-chip active" data-filter="all">Todos</button>
+          <button class="filter-chip" data-filter="mandatory">Obrigatórios</button>
+          <button class="filter-chip" data-filter="technical">Técnicos</button>
+          <button class="filter-chip" data-filter="document">Documentação</button>
+          <button class="filter-chip" data-filter="delivery">Entrega</button>
+          <button class="filter-chip" data-filter="done">Concluídos</button>
+          <button class="filter-chip" data-filter="pending">Pendentes</button>
+        </div>
+
+        <div class="checklist-groups" id="checklistGroups">
+          <div class="check-group" data-group="document">
+            <div class="check-group__title"><div><span>Documentação e gestão</span><small>Estrutura acadêmica + engenharia de software</small></div><span class="count-badge">10 itens</span></div>
+            <label class="check-item" data-tags="mandatory document abnt"><input type="checkbox" data-key="abnt"><span class="checkmark"></span><span><strong>Projeto normalizado em ABNT</strong><small>Seguir rigorosamente o guia de normalização da UNIP.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory document"><input type="checkbox" data-key="negocio"><span class="checkmark"></span><span><strong>Funcionamento do negócio descrito logo no início</strong><small>Explicar claramente como o sistema funciona e quais são suas regras.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory document technical"><input type="checkbox" data-key="backlog"><span class="checkmark"></span><span><strong>Backlog do projeto</strong><small>Itens organizados e ligados à execução do PIM.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory document technical"><input type="checkbox" data-key="sprints"><span class="checkmark"></span><span><strong>Sprints organizadas</strong><small>Aplicação de engenharia de software ágil.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory document technical"><input type="checkbox" data-key="acompanhamento"><span class="checkmark"></span><span><strong>Acompanhamento da evolução</strong><small>Evidenciar o andamento do projeto ao longo do semestre.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory document technical uml"><input type="checkbox" data-key="uml-caso"><span class="checkmark"></span><span><strong>UML - Caso de Uso</strong><small>Diagrama aplicado ao AI Agent Registry.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory document technical uml"><input type="checkbox" data-key="uml-classes"><span class="checkmark"></span><span><strong>UML - Classes</strong><small>Modelo coerente com as entidades e regras do sistema.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory document technical uml"><input type="checkbox" data-key="uml-sequencia"><span class="checkmark"></span><span><strong>UML - Sequência</strong><small>Fluxos principais representados em sequência.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory document testing"><input type="checkbox" data-key="plano-testes"><span class="checkmark"></span><span><strong>Plano de homologação e testes</strong><small>Casos, resultados esperados e critérios de aceite.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory document manual"><input type="checkbox" data-key="manual"><span class="checkmark"></span><span><strong>Manual de uso do sistema</strong><small>Orientar execução, menus e operações do programa.</small></span><em>Obrigatório</em></label>
+          </div>
+
+          <div class="check-group" data-group="technical">
+            <div class="check-group__title"><div><span>Programa em C</span><small>MVP funcional + persistência em arquivo</small></div><span class="count-badge">17 itens</span></div>
+            <label class="check-item" data-tags="mandatory technical c"><input type="checkbox" data-key="linguagem-c"><span class="checkmark"></span><span><strong>MVP desenvolvido em C</strong><small>A linguagem especificada pelo documento é obrigatória.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical c"><input type="checkbox" data-key="limite-50"><span class="checkmark"></span><span><strong>Suportar até 50 agentes</strong><small>Limite máximo exigido no programa.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical c"><input type="checkbox" data-key="id-unico"><span class="checkmark"></span><span><strong>ID único por agente</strong><small>Identificador não pode se repetir.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical c"><input type="checkbox" data-key="nome-80"><span class="checkmark"></span><span><strong>Nome com até 80 caracteres</strong><small>Validar o limite definido no enunciado.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical c"><input type="checkbox" data-key="script-1000"><span class="checkmark"></span><span><strong>Script/instruções com até 1000 caracteres</strong><small>Incluindo espaços e em uma única entrada textual.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical c"><input type="checkbox" data-key="nota-0-5"><span class="checkmark"></span><span><strong>Nota entre 0 e 5</strong><small>Valor armazenado para cada agente.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical c"><input type="checkbox" data-key="cadastrar"><span class="checkmark"></span><span><strong>Cadastrar novo agente</strong><small>Opção presente no menu principal.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical c"><input type="checkbox" data-key="listar"><span class="checkmark"></span><span><strong>Listar agentes cadastrados</strong><small>Exibir os registros existentes.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical c"><input type="checkbox" data-key="buscar-id"><span class="checkmark"></span><span><strong>Buscar agente por ID</strong><small>Pesquisa obrigatória do programa.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical c"><input type="checkbox" data-key="buscar-nome"><span class="checkmark"></span><span><strong>Buscar agente por nome</strong><small>Pesquisa obrigatória do programa.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical c"><input type="checkbox" data-key="editar"><span class="checkmark"></span><span><strong>Editar dados após localizar agente</strong><small>Disponível a partir do resultado da busca.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical c"><input type="checkbox" data-key="excluir"><span class="checkmark"></span><span><strong>Excluir agente após localizar</strong><small>Disponível a partir do resultado da busca.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical c"><input type="checkbox" data-key="voltar"><span class="checkmark"></span><span><strong>Voltar ao menu anterior</strong><small>Fluxo previsto no resultado da busca.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical c"><input type="checkbox" data-key="encerrar"><span class="checkmark"></span><span><strong>Encerrar programa</strong><small>Opção explícita no menu.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical c arrays"><input type="checkbox" data-key="vetores"><span class="checkmark"></span><span><strong>Dados organizados em vetores paralelos</strong><small>Mesma posição dos vetores representa o mesmo agente.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical c arquivo"><input type="checkbox" data-key="persistencia"><span class="checkmark"></span><span><strong>Persistência em arquivo</strong><small>Salvar ao encerrar e recuperar ao iniciar novamente.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical c testing"><input type="checkbox" data-key="codigo-testado"><span class="checkmark"></span><span><strong>Código funcional, comentado e com evidências de teste</strong><small>Usar condicionais, repetições, funções, arranjos e arquivos; evitar tudo na main().</small></span><em>Obrigatório</em></label>
+          </div>
+
+          <div class="check-group" data-group="technical">
+            <div class="check-group__title"><div><span>Banco, redes e IA</span><small>Artefatos técnicos complementares</small></div><span class="count-badge">13 itens</span></div>
+            <label class="check-item" data-tags="mandatory technical banco der"><input type="checkbox" data-key="der"><span class="checkmark"></span><span><strong>DER do banco de dados</strong><small>Modelagem obrigatória mesmo sem integração direta com o C.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical banco sql"><input type="checkbox" data-key="sql-create"><span class="checkmark"></span><span><strong>Script SQL de criação</strong><small>Estruturas necessárias para criar o banco modelado.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical banco sql"><input type="checkbox" data-key="sql-insert"><span class="checkmark"></span><span><strong>Dados de exemplo no banco</strong><small>Incluir alguns registros.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical banco sql"><input type="checkbox" data-key="sql-select"><span class="checkmark"></span><span><strong>Consultas SQL úteis</strong><small>Exemplos de buscas aplicáveis ao projeto.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical rede lan"><input type="checkbox" data-key="rede-diagrama"><span class="checkmark"></span><span><strong>Diagrama básico da rede LAN</strong><small>Representar um possível funcionamento em rede local.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical rede"><input type="checkbox" data-key="rede-especificacoes"><span class="checkmark"></span><span><strong>Especificações da rede</strong><small>Documentar componentes e organização da LAN proposta.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical rede ip"><input type="checkbox" data-key="ip-estatico"><span class="checkmark"></span><span><strong>IPs estáticos</strong><small>Parte das especificações solicitadas.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical rede dhcp"><input type="checkbox" data-key="dhcp"><span class="checkmark"></span><span><strong>DHCP</strong><small>Indicar onde e como seria utilizado na rede proposta.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory technical rede cliente servidor"><input type="checkbox" data-key="cliente-servidor"><span class="checkmark"></span><span><strong>Conceito cliente-servidor aplicado</strong><small>Explorar o funcionamento possível do sistema nesse contexto.</small></span><em>Objetivo</em></label>
+            <label class="check-item" data-tags="mandatory technical ia"><input type="checkbox" data-key="ia-ferramentas"><span class="checkmark"></span><span><strong>Ferramentas de IA utilizadas</strong><small>Registrar quais ferramentas apoiaram o desenvolvimento.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory document ia prompts"><input type="checkbox" data-key="ia-prompts"><span class="checkmark"></span><span><strong>Prompts/scripts de IA documentados</strong><small>Evidenciar como a IA foi aplicada na produção do trabalho.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="document innovation"><input type="checkbox" data-key="inovacao"><span class="checkmark"></span><span><strong>Diferencial de inovação e criatividade</strong><small>A tabela sugerida do guia valoriza um diferencial ligado ao projeto.</small></span><em>Sugerido</em></label>
+            <label class="check-item" data-tags="document innovation optional"><input type="checkbox" data-key="extra"><span class="checkmark"></span><span><strong>Funcionalidade extra coerente</strong><small>Ex.: tags ou avaliação adicional; são exemplos/incentivos, não imposições específicas.</small></span><em>Opcional</em></label>
+          </div>
+
+          <div class="check-group" data-group="document delivery">
+            <div class="check-group__title"><div><span>Sustentabilidade, entrega e apresentação</span><small>Fechamento acadêmico do PIM</small></div><span class="count-badge">10 itens</span></div>
+            <label class="check-item" data-tags="mandatory document sustentabilidade"><input type="checkbox" data-key="relatorio-sust"><span class="checkmark"></span><span><strong>Relatório de sustentabilidade</strong><small>Levantamento ligado à substituição de registros físicos pelo sistema.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory document sustentabilidade"><input type="checkbox" data-key="metricas"><span class="checkmark"></span><span><strong>Métricas ambientais</strong><small>Ex.: papel, água e CO₂ são exemplos do documento.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory document sustentabilidade"><input type="checkbox" data-key="cenario"><span class="checkmark"></span><span><strong>Cenário hipotético com aplicação das métricas</strong><small>Mostrar números/benefícios em uma situação de uso do sistema.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory document sustentabilidade"><input type="checkbox" data-key="educacao-ambiental"><span class="checkmark"></span><span><strong>Recomendações de educação ambiental</strong><small>Previstas nos objetivos específicos do PIM.</small></span><em>Objetivo</em></label>
+            <label class="check-item" data-tags="mandatory document plagiarism"><input type="checkbox" data-key="referencias"><span class="checkmark"></span><span><strong>Citações e referências corretas</strong><small>Toda ideia de fonte externa deve ser devidamente referenciada.</small></span><em>Crítico</em></label>
+            <label class="check-item" data-tags="mandatory delivery"><input type="checkbox" data-key="papel-digital"><span class="checkmark"></span><span><strong>Versão em papel + mídia digital</strong><small>Conforme instrução do documento para entrega ao orientador.</small></span><em>Entrega</em></label>
+            <label class="check-item" data-tags="mandatory delivery"><input type="checkbox" data-key="arquivos"><span class="checkmark"></span><span><strong>Diagramas e código-fonte comentado incluídos</strong><small>Arquivos digitais e anexos conforme aplicável.</small></span><em>Entrega</em></label>
+            <label class="check-item" data-tags="mandatory delivery"><input type="checkbox" data-key="upload"><span class="checkmark"></span><span><strong>Postagem no sistema da UNIP dentro do prazo</strong><small>O documento informa reprovação se a postagem não ocorrer.</small></span><em>Crítico</em></label>
+            <label class="check-item" data-tags="mandatory delivery presentation"><input type="checkbox" data-key="apresentacao"><span class="checkmark"></span><span><strong>Apresentação do funcionamento</strong><small>O grupo deve demonstrar o sistema.</small></span><em>Obrigatório</em></label>
+            <label class="check-item" data-tags="mandatory delivery group"><input type="checkbox" data-key="orientador"><span class="checkmark"></span><span><strong>Participação nos encontros com o orientador</strong><small>O acompanhamento do grupo faz parte das instruções do PIM.</small></span><em>Obrigatório</em></label>
+          </div>
+        </div>
+        <div class="checklist-actions">
+          <button class="ghost-button danger" id="resetChecklist">Limpar marcações</button>
+          <button class="secondary-button" id="copyPending">Copiar pendências</button>
+        </div>
+      </section>
+
+      <section id="disciplinas" class="content-section section-anchor searchable-block" data-search="disciplinas matérias programação banco engenharia software redes inteligência artificial inovação sustentabilidade">
+        <div class="section-heading">
+          <div><span class="section-label">03 • Integração multidisciplinar</span><h2>O que cada matéria precisa entregar</h2><p>Clique em uma disciplina para ver os requisitos vinculados diretamente ao PIM.</p></div>
+        </div>
+
+        <div class="discipline-grid">
+          <details class="discipline-card" data-search="programação estruturada c 50 agentes vetores paralelos arquivo funções">
+            <summary><div class="discipline-icon">C</div><div><span class="status-pill mandatory">Núcleo técnico</span><h3>Programação Estruturada em C</h3><p>MVP funcional do catálogo de agentes.</p></div><span class="chevron">⌄</span></summary>
+            <div class="details-body"><ul class="requirement-list"><li>Programa em <strong>C</strong> para gerenciar o catálogo.</li><li>Até <strong>50 agentes</strong>.</li><li>Campos: <strong>ID, nome, script/instruções e nota</strong>.</li><li>Nome: até <strong>80 caracteres</strong>; script: até <strong>1000 caracteres</strong>; nota: <strong>0 a 5</strong>.</li><li>Menu com cadastrar, listar, buscar por ID, buscar por nome e encerrar.</li><li>Na busca: exibir dados e permitir <strong>editar, excluir ou voltar</strong>.</li><li>Organização em <strong>vetores paralelos</strong>.</li><li>Persistência em <strong>arquivo</strong>: salvar e recuperar registros.</li><li>Usar condicionais, repetições, funções, arranjos e manipulação de arquivos.</li><li>Código funcional, comentado, validado e com evidências de teste.</li></ul></div>
+          </details>
+
+          <details class="discipline-card" data-search="modelagem banco dados nosql der sql create insert select">
+            <summary><div class="discipline-icon">DB</div><div><span class="status-pill mandatory">Obrigatório</span><h3>Modelagem de Banco de Dados e NoSQL</h3><p>Modelagem completa, mesmo sem o C usar banco agora.</p></div><span class="chevron">⌄</span></summary>
+            <div class="details-body"><ul class="requirement-list"><li>Desenvolver a <strong>modelagem do banco de dados</strong>.</li><li>Apresentar o <strong>DER</strong>.</li><li>Entregar <strong>script SQL de criação</strong>.</li><li>Inserir alguns <strong>dados de exemplo</strong>.</li><li>Demonstrar <strong>consultas/buscas úteis</strong>.</li></ul><div class="info-callout"><strong>Importante:</strong> o documento deixa claro que o software em C não precisa utilizar o banco neste momento.</div></div>
+          </details>
+
+          <details class="discipline-card" data-search="engenharia software ágil sprints backlog uml testes homologação manual">
+            <summary><div class="discipline-icon">AG</div><div><span class="status-pill mandatory">Obrigatório</span><h3>Engenharia de Software Ágil</h3><p>Planejamento, modelagem e qualidade do projeto.</p></div><span class="chevron">⌄</span></summary>
+            <div class="details-body"><ul class="requirement-list"><li>Organizar <strong>sprints, backlog e acompanhamento</strong>.</li><li>UML: <strong>caso de uso, classes e sequência</strong>.</li><li><strong>Plano de homologação e testes</strong>.</li><li><strong>Manual de uso</strong> do sistema.</li><li>Regras de negócio definidas pelo próprio grupo e aplicadas ao sistema.</li></ul></div>
+          </details>
+
+          <details class="discipline-card" data-search="redes computadores sistemas distribuídos lan ip estático dhcp cliente servidor diagrama">
+            <summary><div class="discipline-icon">LAN</div><div><span class="status-pill mandatory">Obrigatório</span><h3>Redes e Sistemas Distribuídos</h3><p>Uma possível implantação do sistema em rede local.</p></div><span class="chevron">⌄</span></summary>
+            <div class="details-body"><ul class="requirement-list"><li><strong>Diagrama básico de rede</strong>.</li><li>Especificação de um possível funcionamento em <strong>LAN</strong>.</li><li>Indicação de <strong>IPs estáticos, DHCP etc.</strong></li><li>Explorar conceitos de <strong>cliente-servidor</strong>.</li></ul><div class="info-callout"><strong>Sem exagero:</strong> o texto pede representação/especificação de funcionamento em LAN; não exige transformar o programa C em um sistema de rede funcional.</div></div>
+          </details>
+
+          <details class="discipline-card" data-search="inteligência artificial ia ferramentas prompts scripts evidências desenvolvimento texto">
+            <summary><div class="discipline-icon">IA</div><div><span class="status-pill mandatory">Evidência</span><h3>Inteligência Artificial</h3><p>Registrar como a IA apoiou o desenvolvimento do PIM.</p></div><span class="chevron">⌄</span></summary>
+            <div class="details-body"><ul class="requirement-list"><li>Usar IA no desenvolvimento do PIM.</li><li>Apresentar <strong>evidências das ferramentas</strong> utilizadas.</li><li>Registrar <strong>scripts/prompts</strong> usados no desenvolvimento do texto/projeto.</li></ul><div class="info-callout"><strong>Não está exigido no guia:</strong> integrar o programa em C a uma API de LLM. O que aparece como mínimo é a evidência de uso de IA no desenvolvimento.</div></div>
+          </details>
+
+          <details class="discipline-card" data-search="pesquisa tecnologia inovação criatividade diferencial tags avaliação extra">
+            <summary><div class="discipline-icon">IN</div><div><span class="status-pill suggested">Pesquisa</span><h3>Pesquisa, Tecnologia e Inovação</h3><p>Pesquisa aplicada e diferencial do projeto.</p></div><span class="chevron">⌄</span></summary>
+            <div class="details-body"><ul class="requirement-list"><li>O PIM incentiva pesquisa de temas inovadores ligados ao curso.</li><li>O guia apresenta <strong>inovação e criatividade</strong> em seus critérios sugeridos.</li><li>Descrever o <strong>diferencial</strong> escolhido pelo grupo para o projeto.</li></ul><div class="info-callout"><strong>Exemplos, não obrigações específicas:</strong> tags para localizar agentes e funcionalidades extras de avaliação são sugestões do documento.</div></div>
+          </details>
+
+          <details class="discipline-card" data-search="educação ambiental sustentabilidade papel água co2 métricas cenário hipotético">
+            <summary><div class="discipline-icon">EA</div><div><span class="status-pill mandatory">Obrigatório</span><h3>Educação Ambiental</h3><p>Métricas de sustentabilidade ligadas à digitalização.</p></div><span class="chevron">⌄</span></summary>
+            <div class="details-body"><ul class="requirement-list"><li>Produzir <strong>relatório de sustentabilidade</strong>.</li><li>Levantar métricas alcançáveis com a substituição de registros físicos.</li><li>Aplicar as métricas a um <strong>cenário hipotético</strong> do sistema.</li><li>Exemplos citados: redução de papel, economia de água e redução de CO₂.</li><li>Incluir recomendações de educação ambiental.</li></ul></div>
+          </details>
+        </div>
+      </section>
+
+      <section id="sistema-c" class="content-section section-anchor searchable-block" data-search="sistema c requisitos id nome script nota menu persistência vetores paralelos">
+        <div class="section-heading">
+          <div><span class="section-label">04 • MVP</span><h2>Especificação do sistema em C</h2><p>A parte que precisa bater exatamente com o enunciado técnico.</p></div>
+          <span class="weight-badge">Núcleo técnico do projeto</span>
+        </div>
+
+        <div class="spec-layout">
+          <div class="spec-card main-spec">
+            <div class="card-head"><h3>Estrutura mínima de um agente</h3><span class="status-pill mandatory">Não negociar</span></div>
+            <div class="field-table" role="table" aria-label="Campos obrigatórios do agente">
+              <div class="field-row header" role="row"><span>Campo</span><span>Regra</span><span>Observação</span></div>
+              <div class="field-row" role="row"><strong>ID</strong><span>Único</span><small>Identifica o agente sem duplicidade</small></div>
+              <div class="field-row" role="row"><strong>Nome</strong><span>≤ 80 caracteres</span><small>Texto do nome do agente</small></div>
+              <div class="field-row" role="row"><strong>Script</strong><span>≤ 1000 caracteres</span><small>Inclui espaços, entrada textual única</small></div>
+              <div class="field-row" role="row"><strong>Nota</strong><span>0 a 5</span><small>Valor obrigatório do registro</small></div>
+            </div>
+          </div>
+
+          <div class="spec-card">
+            <div class="card-head"><h3>Menu principal</h3><span>Fluxo obrigatório</span></div>
+            <ol class="flow-list"><li><span>1</span>Cadastrar novo agente</li><li><span>2</span>Listar agentes cadastrados</li><li><span>3</span>Buscar agente pelo ID</li><li><span>4</span>Buscar agente pelo nome</li><li><span>5</span>Encerrar o programa</li></ol>
+          </div>
+
+          <div class="spec-card">
+            <div class="card-head"><h3>Depois da busca</h3><span>Ações obrigatórias</span></div>
+            <div class="action-grid"><div><strong>Visualizar</strong><small>todas as informações</small></div><div><strong>Editar</strong><small>dados do agente</small></div><div><strong>Excluir</strong><small>o registro localizado</small></div><div><strong>Voltar</strong><small>ao menu anterior</small></div></div>
+          </div>
+
+          <div class="spec-card code-card">
+            <div class="card-head"><h3>Estrutura exigida</h3><span>Vetores paralelos</span></div>
+<pre><code>// representação conceitual
+int ids[50];
+char nomes[50][81];
+char scripts[50][1001];
+float notas[50];
+
+// mesma posição = mesmo agente</code></pre>
+            <p>O guia especifica vetores paralelos. Portanto, não trate uma substituição completa por outra estrutura como equivalente sem validar com o orientador.</p>
+          </div>
+
+          <div class="spec-card wide">
+            <div class="card-head"><h3>Persistência e organização</h3><span class="status-pill mandatory">Obrigatório</span></div>
+            <div class="timeline">
+              <div class="timeline-step"><span>01</span><strong>Iniciar</strong><small>Ler arquivo e recuperar registros existentes</small></div>
+              <div class="timeline-arrow">→</div>
+              <div class="timeline-step"><span>02</span><strong>Operar</strong><small>Cadastrar, listar, buscar, editar e excluir</small></div>
+              <div class="timeline-arrow">→</div>
+              <div class="timeline-step"><span>03</span><strong>Salvar</strong><small>Persistir alterações em arquivo</small></div>
+              <div class="timeline-arrow">→</div>
+              <div class="timeline-step"><span>04</span><strong>Reabrir</strong><small>Dados continuam disponíveis</small></div>
+            </div>
+            <p class="muted-note">Também devem aparecer condicionais, repetições, funções, arranjos e manipulação de arquivos, com a lógica distribuída em funções quando adequado.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="entregaveis" class="content-section section-anchor searchable-block" data-search="entregáveis artefatos abnt código uml rede ia homologação testes manual sustentabilidade demonstração">
+        <div class="section-heading"><div><span class="section-label">05 • Pacote final</span><h2>Entregáveis mínimos</h2><p>O guia usa a expressão “cada grupo deverá minimamente”. Então estes itens merecem tratamento de requisito.</p></div></div>
+        <div class="deliverables-grid">
+          <article class="deliverable"><span>01</span><div><strong>Projeto documentado em ABNT</strong><p>Documento acadêmico completo, normalizado e original.</p></div></article>
+          <article class="deliverable"><span>02</span><div><strong>Código-fonte funcional e comentado</strong><p>Programa em C validado e acompanhado de evidências de teste.</p></div></article>
+          <article class="deliverable"><span>03</span><div><strong>Diagramas UML</strong><p>Caso de uso, classes e sequência.</p></div></article>
+          <article class="deliverable"><span>04</span><div><strong>Diagrama de rede</strong><p>LAN, IPs estáticos, DHCP e especificações.</p></div></article>
+          <article class="deliverable"><span>05</span><div><strong>Evidências de IA</strong><p>Ferramentas e scripts/prompts utilizados no desenvolvimento.</p></div></article>
+          <article class="deliverable"><span>06</span><div><strong>Plano de homologação e testes</strong><p>Casos de teste, validações e critérios de aceite.</p></div></article>
+          <article class="deliverable"><span>07</span><div><strong>Manual de uso</strong><p>Passo a passo do sistema para o usuário.</p></div></article>
+          <article class="deliverable"><span>08</span><div><strong>Relatório de sustentabilidade</strong><p>Métricas + cenário hipotético de utilização.</p></div></article>
+          <article class="deliverable"><span>09</span><div><strong>Demonstração do funcionamento</strong><p>Apresentação do sistema pelo grupo.</p></div></article>
+        </div>
+      </section>
+
+      <section id="riscos" class="content-section section-anchor searchable-block" data-search="riscos críticos reprovação plágio prazo linguagem tecnologias abnt grupo seis apresentação">
+        <div class="section-heading"><div><span class="section-label">06 • Atenção máxima</span><h2>Riscos críticos para a entrega</h2><p>Itens com impacto direto na aprovação e na validação do projeto.</p></div></div>
+        <div class="risk-grid">
+          <article class="risk-card severe"><span class="risk-icon">!</span><div><strong>Não postar no sistema dentro do prazo</strong><p>O guia informa expressamente que, se o PIM não for postado no sistema acadêmico dentro do prazo, o aluno será reprovado.</p></div></article>
+          <article class="risk-card severe"><span class="risk-icon">!</span><div><strong>Plágio</strong><p>Plágio identificado zera o trabalho para todos os integrantes e grupos envolvidos. O texto também trata plágio integral, parcial, conceitual e autoplágio.</p></div></article>
+          <article class="risk-card high"><span class="risk-icon">⚠</span><div><strong>Ignorar linguagem/tecnologias exigidas</strong><p>O documento avisa que trabalhos que não atendam aos itens de linguagem e tecnologias descritos podem ser reprovados.</p></div></article>
+          <article class="risk-card high"><span class="risk-icon">⚠</span><div><strong>ABNT mal feita</strong><p>A tabela sugerida alerta que trabalhos fora do formato ABNT poderão ser reprovados sumariamente.</p></div></article>
+          <article class="risk-card"><span class="risk-icon">i</span><div><strong>Máximo de 8 integrantes</strong><p>Conforme orientação atual da coordenação do curso. O grupo deve participar dos encontros definidos pelo orientador.</p></div></article>
+          <article class="risk-card"><span class="risk-icon">i</span><div><strong>Nota pode variar por integrante</strong><p>A nota final é definida pelo orientador e pode ser diferente para cada aluno conforme a participação ao longo do semestre.</p></div></article>
+        </div>
+      </section>
+
+      <section id="fonte" class="content-section section-anchor searchable-block" data-search="documento oficial fonte pdf unip pim ii 2026 2">
+        <div class="source-card">
+          <div class="source-card__logo"><img src="assets/unip-logo-dourado.png" alt="UNIP - Universidade Paulista" width="2172" height="724" /></div>
+          <div class="source-card__content">
+            <span class="section-label">07 • Fonte</span>
+            <h2>Documento oficial usado como base</h2>
+            <p><strong>UNIVERSIDADE PAULISTA • CST em Análise e Desenvolvimento de Sistemas • PIM II • 2026/2.</strong></p>
+            <p>O conteúdo deste painel foi organizado a partir do arquivo fornecido para o projeto. Em caso de divergência, orientação posterior ou mudança pelo professor orientador, prevalece a instrução institucional/orientador.</p>
+            <div class="source-actions"><a class="primary-button" href="docs/PIM-II-oficial-2026-2.pdf" target="_blank" rel="noopener">Abrir documento oficial</a><button class="secondary-button" id="copyUrlButton">Copiar link desta página</button></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
