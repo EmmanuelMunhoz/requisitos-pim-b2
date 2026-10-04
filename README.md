@@ -1,58 +1,81 @@
-# PIM II 2026/2 - ADS UNIP
+# PIM II 2026/2 — ADS UNIP
 
-Site estático de apoio ao Projeto Integrado Multidisciplinar (PIM II), organizado a partir do documento oficial fornecido pela faculdade.
+Portal acadêmico desenvolvido como apoio ao **Projeto Integrado Multidisciplinar (PIM II)** do curso de **Análise e Desenvolvimento de Sistemas — UNIP**.
 
-## Abrir localmente
+O projeto organiza, de forma visual e interativa, os principais requisitos apresentados no documento oficial do PIM, facilitando o acompanhamento das disciplinas, entregáveis, requisitos técnicos e etapas necessárias para a conclusão do trabalho.
 
-Você pode simplesmente abrir `index.html` no navegador.
+---
 
-Para simular um servidor local:
+## 🎯 Tema do projeto
 
-```bash
-python -m http.server 8080
-```
+**Desenvolvimento de um Sistema Catálogo e Gerenciador de Configurações de Agentes de IA (AI Agent Registry).**
 
-Depois abra `http://localhost:8080`.
+O sistema proposto envolve conhecimentos de diferentes disciplinas do semestre, integrando desenvolvimento em C, banco de dados, engenharia de software, redes, inteligência artificial, inovação e sustentabilidade.
 
-## Publicar no GitHub Pages
+---
 
-1. Crie um repositório no GitHub.
-2. Envie **todo o conteúdo desta pasta** para a raiz do repositório.
-3. No GitHub, abra **Settings → Pages**.
-4. Em **Build and deployment**, escolha **Deploy from a branch**.
-5. Selecione a branch `main` e a pasta `/ (root)`.
-6. Salve e aguarde o endereço do GitHub Pages ser publicado.
+## 🌐 Portal do projeto
 
-Não há dependências, build, npm ou framework. É HTML + CSS + JavaScript puro.
+O site foi desenvolvido como uma central de acompanhamento do PIM.
 
-## Recursos do site
+Entre os recursos disponíveis estão:
 
-- Design responsivo para desktop e celular.
-- Navegação superior com destaque da seção atual e menu adaptado ao celular.
-- Checklist interativo com progresso salvo no `localStorage`.
-- Filtros por tipo de requisito.
-- Busca rápida por requisitos.
-- Disciplinas organizadas em blocos expansíveis.
-- Especificação do sistema em C, entregáveis mínimos e riscos críticos.
-- Link para o PDF oficial dentro da própria pasta `docs/`.
-- Acesso ao PDF oficial pelo header e pelo card final.
-- Botões para copiar pendências e o link da página.
+- Checklist interativo dos requisitos do projeto;
+- Progresso salvo localmente no navegador;
+- Organização dos requisitos por disciplina;
+- Especificação do sistema desenvolvido em C;
+- Requisitos de modelagem de banco de dados;
+- Requisitos de redes e sistemas distribuídos;
+- Evidências relacionadas ao uso de Inteligência Artificial;
+- Entregáveis mínimos exigidos pelo projeto;
+- Alertas sobre pontos críticos da entrega;
+- Busca rápida por requisitos;
+- Acesso direto ao documento oficial do PIM;
+- Interface responsiva para desktop e dispositivos móveis.
 
-## Estrutura
+---
+
+## 🧩 Disciplinas contempladas
+
+O PIM integra conhecimentos das seguintes disciplinas:
+
+- Programação Estruturada em C;
+- Modelagem de Banco de Dados e NoSQL;
+- Engenharia de Software Ágil;
+- Redes de Computadores e Sistemas Distribuídos;
+- Inteligência Artificial;
+- Pesquisa, Tecnologia e Inovação;
+- Educação Ambiental.
+
+---
+
+## 💻 Tecnologias utilizadas
+
+O portal foi desenvolvido utilizando apenas tecnologias web nativas:
+
+- HTML5
+- CSS3
+- JavaScript
+
+Não existem frameworks, dependências externas, processo de build ou backend.
+
+Isso permite que o projeto seja executado diretamente no navegador e publicado facilmente através do **GitHub Pages**.
+
+---
+
+## 📂 Estrutura do projeto
 
 ```text
 pim-unip-site/
+│
 ├── index.html
 ├── styles.css
 ├── script.js
 ├── README.md
+│
 ├── assets/
 │   ├── favicon.svg
 │   └── unip-logo-dourado.png
+│
 └── docs/
     └── PIM-II-oficial-2026-2.pdf
-```
-
-## Observação
-
-Este é um site acadêmico de apoio aos alunos e não um portal institucional oficial da UNIP. O PDF da pasta `docs/` é a fonte dos requisitos acadêmicos. O limite de oito integrantes exibido no portal segue orientação posterior da coordenação; o PDF original menciona seis.
